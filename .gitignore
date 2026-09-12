@@ -1,0 +1,51 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model and data artifacts
+*.h5
+*.keras
+*.tflite
+*.pb
+*.ckpt
+*.bin
+
+# Large dataset folders (keep local, do not push)
+training/PlantVillage/
+
+# Optional: ignore all image files in training data if you do not want to upload them
+# training/**/*.jpg
+# training/**/*.jpeg
+# training/**/*.png
+
+# Node / frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Mobile app
+mobile-app/node_modules/
+
+# Editor settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp

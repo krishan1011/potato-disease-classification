@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Potato Disease Detector logo">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="26" fill="url(#bg)"/>
+  <ellipse cx="64" cy="68" rx="32" ry="28" fill="#f5f5f4" opacity="0.96"/>
+  <ellipse cx="64" cy="68" rx="20" ry="16" fill="#d6d3d1" opacity="0.9"/>
+  <path d="M44 76c8-18 16-25 20-25s12 7 20 25" fill="none" stroke="#14532d" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="52" cy="54" r="4" fill="#14532d"/>
+  <circle cx="76" cy="54" r="4" fill="#14532d"/>
+  <path d="M56 84c6 7 10 10 8 13" fill="none" stroke="#14532d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M72 84c-6 7-10 10-8 13" fill="none" stroke="#14532d" stroke-width="4" stroke-linecap="round"/>
+</svg>
