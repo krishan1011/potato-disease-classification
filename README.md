@@ -1,31 +1,44 @@
-# Potato Disease Detector
+# Potato Disease Classification
 
-AI-powered potato disease detection system for identifying common potato leaf diseases from image uploads using deep learning.
+A deep learning project for detecting potato leaf diseases from plant images. I built a CNN-based classifier that separates healthy leaves from early blight and late blight cases, then packaged it into a web app, mobile app, and API-based inference pipeline.
 
-This project combines a web app, mobile app, and model-serving backend to detect diseases such as Early Blight, Late Blight, and Healthy leaves with predicted confidence scores.
+## Results
 
-## Features
+The model was trained in the notebook at `training/potato_disease.ipynb` and achieved strong validation performance:
 
-- React web interface for image upload and prediction
-- React Native mobile app for Android and iOS
-- TensorFlow/Keras model inference pipeline
-- Cloud deployment support for GCP hosting
-- Image-based classification workflow for field and lab use
+- Validation accuracy: 99.48%
+- Validation loss: 0.0257
+- Training accuracy: 98.67%
+- Training loss: 0.0354
+- Best validation accuracy observed: 99.48%
+- Classes predicted: Healthy, Early Blight, Late Blight
 
-## Overview
+These results show the model is capable of reliably identifying common potato leaf diseases from image inputs in a production-style pipeline.
 
-The app is designed to help farmers, researchers, and plant-health enthusiasts quickly assess potato crop health from leaf images. Users can upload an image and receive a predicted disease label with confidence level.
+## Project Overview
+
+This project combines:
+
+- a React frontend for image upload and prediction
+- a Python backend for model inference
+- a React Native mobile app for Android/iOS use
+- TensorFlow/Keras model training and deployment support
+- Google Cloud deployment examples for scalable hosting
+
+## Why this project matters
+
+Plant disease detection is a practical use case for AI in agriculture. This system helps farmers and growers quickly assess crop health from a leaf image, reducing manual inspection time and supporting faster intervention decisions.
 
 ## Project Structure
 
-- `frontend/` — web app for image upload and classification
-- `api/` — backend API code for model serving
-- `gcp/` — Google Cloud deployment scripts
-- `mobile-app/` — React Native mobile app
-- `training/` — training notebook and dataset folder
-- `saved_models/` — saved model outputs
-- `tf-lite-models/` — TensorFlow Lite model files
-- `test_images_from_internet/` — sample images for testing
+- `frontend/` — web app interface
+- `api/` — backend serving code
+- `gcp/` — Google Cloud deployment setup
+- `mobile-app/` — React Native mobile client
+- `training/` — model training notebook and dataset
+- `saved_models/` — exported model artifacts
+- `tf-lite-models/` — TensorFlow Lite versions
+- `test_images_from_internet/` — sample test images
 
 ## Tech Stack
 
@@ -33,10 +46,10 @@ The app is designed to help farmers, researchers, and plant-health enthusiasts q
 - TensorFlow / Keras
 - React
 - React Native
-- Material UI
-- Google Cloud Storage support
+- Google Cloud
+- REST API deployment
 
-## Setup Instructions
+## Setup
 
 ### 1. Clone the repository
 
@@ -45,7 +58,7 @@ git clone https://github.com/krishan1011/potato-disease-classification.git
 cd potato-disease-classification
 ```
 
-### 2. Frontend setup
+### 2. Frontend
 
 ```bash
 cd frontend
@@ -53,7 +66,7 @@ npm install
 npm start
 ```
 
-### 3. API setup
+### 3. Backend API
 
 ```bash
 cd api
@@ -61,7 +74,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### 4. Mobile app setup
+### 4. Mobile app
 
 ```bash
 cd mobile-app
@@ -73,22 +86,22 @@ npx react-native run-ios
 
 ## Model Notes
 
-- Place your trained model in the appropriate folder used by your backend.
-- Update any cloud bucket names or model paths in config files before deployment.
-- The example configuration can be customized for your own environment.
+- The training pipeline is located in `training/potato_disease.ipynb`.
+- Model files and large datasets are excluded from version control to keep the repository lightweight.
+- Update any cloud credentials, bucket names, and model paths before production deployment.
 
-## Important
+## Repository Notes
 
-Before publishing or deploying, make sure to:
+Before deploying publicly, review the following:
 
-- replace placeholder GCP bucket names
-- set your own custom app IDs and package names
-- update the app title and branding if needed
-- generate your own signing keys for release builds
+- replace placeholder cloud configuration values
+- update app package names and identifiers
+- set your own signing credentials for release builds
+- verify model paths in the serving backend
 
 ## License
 
-This project is provided for educational and personal use. Add your preferred license before publishing publicly.
+This project is intended for educational and personal use. Add a preferred open-source license before publishing it publicly.
 
 ## Author
 
